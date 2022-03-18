@@ -24,12 +24,10 @@ func  getDatabaseInstance() *Database  {
 	}
 	return db
 }
-
 func (Database) createSingleConnection(){
 	fmt.Printf("Creating singleton for database")
 	time.Sleep(2*time.Second)
 }
-
 func main(){
 	var wg sync.WaitGroup
 	for i:= 0 ; i<10;i++ {
